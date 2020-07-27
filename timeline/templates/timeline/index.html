@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Timeline</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <ul>
+        {% for moment in moments %}
+        <li>
+            <ul>
+                <li>{{ moment.title }}</li>
+                <li>{{ moment.description }}</li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
