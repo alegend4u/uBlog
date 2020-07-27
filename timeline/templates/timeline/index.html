@@ -12,6 +12,13 @@
             <ul>
                 <li>{{ moment.title }}</li>
                 <li>{{ moment.description }}</li>
+                <ul>
+                    {% for media in moment.get_gallery %}
+                    <li>
+                        <img src="{{ media.file.url }}" height="100"/>
+                    </li>
+                    {% endfor %}
+                </ul>
             </ul>
         </li>
         {% endfor %}

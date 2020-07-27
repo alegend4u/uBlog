@@ -11,11 +11,14 @@ LARGE_TEXT = 1500
 # Create your models here.
 class Moment(models.Model):
     title = models.CharField(max_length=SMALL_TEXT)
-    description = models.CharField(max_length=LARGE_TEXT, blank=True)
+    description = models.CharField(max_length=LARGE_TEXT, blank=True, )
     timestamp = models.DateTimeField(default=datetime.datetime.now)
 
     def __str__(self):
         return self.title
+
+    def get_gallery(self):
+        return self.gallery.get_queryset()
 
 
 def moment_gallery_path(instance, filename):
