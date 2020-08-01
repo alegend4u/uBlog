@@ -1,6 +1,7 @@
 import datetime
 from pathlib import Path
 
+import filetype
 from django.db import models
 
 TEXT_SHORT = 25
@@ -39,3 +40,14 @@ class Media(models.Model):
 
     def __str__(self):
         return f'{self.moment}:{self.file.name}'
+
+    def save(self, *args, **kwargs):
+        file_mime = filetype.guess_mime(self.file).lower()
+        if 'video' in file_mime:
+            self.type = 'v'
+        elif 'image' in file_mime:
+            self.type = 'i'
+        else:
+            # Should raise eror
+            raise TypeError("Media file not supported or invalid.")
+        super(Media, self).save(*args, **kwargs)
