@@ -42,7 +42,8 @@ class Media(models.Model):
         return f'{self.moment}:{self.file.name}'
 
     def save(self, *args, **kwargs):
-        file_mime = mimetypes.guess_type(self.file).lower()
+        file_mime, _ = mimetypes.guess_type(str(self.file))
+        file_mime = file_mime.lower()
         if 'video' in file_mime:
             self.type = 'v'
         elif 'image' in file_mime:
