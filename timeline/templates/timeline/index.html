@@ -1,27 +1,26 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Timeline</title>
+    <title>Timeline</title>
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <ul>
-        {% for moment in moments %}
-        <li>
-            <ul>
-                <li>{{ moment.title }}</li>
-                <li>{{ moment.description }}</li>
-                <ul>
-                    {% for media in moment.get_gallery %}
-                    <li>
-                        <img src="{{ media.file.url }}" height="100"/>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </ul>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+    <div class="container">
+        <ul>
+            {% for moment in moments %}
+                <li>
+                    <ul>
+                        <li><h5>{{ moment.title }}: {{ moment.description }}</h5></li>
+                        <ul>
+                            {% for media in moment.get_gallery %}
+                                <li>
+                                    <img src="{{ media.file.url }}" height="100"/>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

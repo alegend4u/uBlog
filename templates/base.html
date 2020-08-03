@@ -5,10 +5,20 @@
     {% block title %}
     <title>Title</title>
     {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href='{% static "css/main.css" %}' type="text/css">
 </head>
 <body>
+<nav class="nav">
+    <h1 class="title">Rishabh Prajapati</h1>
+    <ul class="navbar">
+        <li><a class="navbar__item" href="#!">About Me</a></li>
+        <li><a class="navbar__item" href="#!">Portfolio</a></li>
+        <li><a class="navbar__item" href="#!">Timeline Blog</a></li>
+        <li><a class="navbar__item" href="#!">Contact Me</a></li>
+    </ul>
+</nav>
 {% block content %}
-Put content here.
 {% endblock %}
 </body>
 </html>

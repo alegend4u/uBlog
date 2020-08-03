@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Playball&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+*::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  background: #4c4c4c;
+}
+.nav .title {
+  position: fixed;
+  bottom: 0;
+  left: 2rem;
+  font-family: "Playball", cursive;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #dbdbdb;
+}
+.nav .navbar {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  list-style: none;
+  padding: 2rem;
+  text-align: right;
+  font-family: "Roboto", serif;
+}
+.nav .navbar__item {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #dbdbdb;
+  padding-right: 2rem;
+  transition: all 0.5s ease-in-out;
+}
+.nav .navbar__item:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
