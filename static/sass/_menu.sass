@@ -7,7 +7,9 @@
   left: 0
   z-index: 2
   width: 100vw
+  height: 5rem
   background: $primary-background
+  @include transition-ease
 
   .title
     position: fixed
@@ -17,11 +19,11 @@
     font-size: 2rem
     padding: 1rem
     color: $primary-color
+    @include transition-ease
 
   .navbar
     display: flex
     justify-content: center
-    width: 100vw
     list-style: none
     padding: 2rem
     text-align: right
@@ -36,3 +38,21 @@
 
       &:hover
         color: white
+
+  .menu-btn
+    display: none
+    position: relative
+    top: 50%
+    left: 90%
+    transform: translateY(-50%)
+    z-index: 2
+    height: 20px
+    width: 28px
+
+    .burger
+      display: block
+      height: 4px
+      width: 28px
+      margin: 5px
+      border-radius: 2px
+      background: $primary-color

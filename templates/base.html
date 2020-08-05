@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     {% block title %}
-    <title>Title</title>
+        <title>Title</title>
     {% endblock %}
     {% load static %}
     <link rel="stylesheet" href='{% static "css/main.css" %}' type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
 <nav class="nav">
+    <div class="menu-btn">
+        <span class="burger"></span>
+        <span class="burger"></span>
+        <span class="burger"></span>
+    </div>
     <h1 class="title">Rishabh Prajapati</h1>
     <ul class="navbar">
         <li><a class="navbar__item" href="#!">About Me</a></li>

@@ -1,2 +1,14 @@
 @mixin transition-ease
   transition: all 0.5s ease-in-out
+
+@mixin media-sm
+  @media screen and (max-width: 900px)
+    @content
+
+@mixin media-lg
+  @media screen and (max-width: 1300px)
+    @content
+
+@mixin media-xl
+  @media screen and (max-width: 1600px)
+    @content

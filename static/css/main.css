@@ -22,7 +22,9 @@ a {
   left: 0;
   z-index: 2;
   width: 100vw;
+  height: 5rem;
   background: #4c4c4c;
+  transition: all 0.5s ease-in-out;
 }
 .nav .title {
   position: fixed;
@@ -32,11 +34,11 @@ a {
   font-size: 2rem;
   padding: 1rem;
   color: #dbdbdb;
+  transition: all 0.5s ease-in-out;
 }
 .nav .navbar {
   display: flex;
   justify-content: center;
-  width: 100vw;
   list-style: none;
   padding: 2rem;
   text-align: right;
@@ -51,6 +53,38 @@ a {
 }
 .nav .navbar__item:hover {
   color: white;
+}
+.nav .menu-btn {
+  display: none;
+  position: relative;
+  top: 50%;
+  left: 90%;
+  transform: translateY(-50%);
+  z-index: 2;
+  height: 20px;
+  width: 28px;
+}
+.nav .menu-btn .burger {
+  display: block;
+  height: 4px;
+  width: 28px;
+  margin: 5px;
+  border-radius: 2px;
+  background: #dbdbdb;
+}
+
+@media screen and (max-width: 900px) {
+  .nav .navbar {
+    visibility: hidden;
+  }
+  .nav .menu-btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .nav .navbar {
+    justify-content: flex-end;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
