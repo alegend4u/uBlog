@@ -5,19 +5,21 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div>
         <ul>
             {% for moment in moments %}
                 <li>
                     <ul>
                         <li><h5>{{ moment.title }}: {{ moment.description }}</h5></li>
-                        <ul>
-                            {% for media in moment.get_gallery %}
-                                <li>
-                                    <img src="{{ media.file.url }}" height="100"/>
-                                </li>
-                            {% endfor %}
-                        </ul>
+                        <li>
+                            <ul>
+                                {% for media in moment.get_gallery %}
+                                    <li>
+                                        <img src="{{ media.file.url }}" height="100" alt="{{ media.file.name }}"/>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             {% endfor %}

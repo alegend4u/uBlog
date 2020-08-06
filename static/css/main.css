@@ -24,7 +24,7 @@ a {
   width: 100vw;
   height: 5rem;
   background: #4c4c4c;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .nav .title {
   position: fixed;
@@ -35,7 +35,7 @@ a {
   font-weight: normal;
   padding: 1rem;
   color: #dbdbdb;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .nav .navbar {
   display: flex;
@@ -50,7 +50,7 @@ a {
   font-weight: bold;
   color: #dbdbdb;
   padding-right: 2rem;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .nav .navbar__item:hover {
   color: white;
@@ -72,6 +72,9 @@ a {
   margin: 5px;
   border-radius: 2px;
   background: #dbdbdb;
+}
+.nav .menu-btn .burger:hover {
+  color: white;
 }
 
 @media screen and (max-width: 900px) {
