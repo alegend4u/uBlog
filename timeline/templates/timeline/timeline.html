@@ -3,32 +3,24 @@
 {% load static %}
 
 {% block title %}
-    <title>Timeline</title>
+<title>Timeline</title>
 {% endblock %}
 
 {% block extracss %}
-    <link rel="stylesheet" href="{% static 'timeline/css/timeline.css' %}">
+<link rel="stylesheet" href="{% static 'timeline/css/timeline.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div>
-        <ul>
-            {% for moment in moments %}
-                <li>
-                    <ul>
-                        <li><h5>{{ moment.title }}: {{ moment.description }}</h5></li>
-                        <li>
-                            <ul>
-                                {% for media in moment.get_gallery %}
-                                    <li>
-                                        <img src="{{ media.file.url }}" height="100" alt="{{ media.file.name }}"/>
-                                    </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+<div>
+    {% for moment in moments %}
+    <div class="moment">
+        <h5 class="moment__title">{{ moment.title }}: {{ moment.description }}</h5>
+        <div class="moment__gallery">
+            {% for media in moment.get_gallery %}
+            <img src="{{ media.file.url }}" height="100" alt="{{ media.file.name }}"/>
             {% endfor %}
-        </ul>
+        </div>
     </div>
+    {% endfor %}
+</div>
 {% endblock %}
