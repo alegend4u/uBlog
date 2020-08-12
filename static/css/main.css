@@ -23,7 +23,7 @@ a {
   z-index: 2;
   width: 100vw;
   height: 5rem;
-  background: #4c4c4c;
+  background: #040303;
   transition: all 0.3s ease-in-out;
 }
 .nav .title {
@@ -34,7 +34,7 @@ a {
   font-size: 2rem;
   font-weight: normal;
   padding: 1rem;
-  color: #dbdbdb;
+  color: #c2c2c2;
   transition: all 0.3s ease-in-out;
 }
 .nav .navbar {
@@ -48,7 +48,7 @@ a {
 .nav .navbar__item {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #dbdbdb;
+  color: #c2c2c2;
   padding-right: 2rem;
   transition: all 0.3s ease-in-out;
 }
@@ -71,7 +71,7 @@ a {
   width: 28px;
   margin: 5px;
   border-radius: 2px;
-  background: #dbdbdb;
+  background: #c2c2c2;
 }
 .nav .menu-btn .burger:hover {
   color: white;
