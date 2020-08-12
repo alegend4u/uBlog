@@ -4,4 +4,21 @@ body {
   background-size: auto;
 }
 
+.moment {
+  background: #c2c2c2;
+  width: 50%;
+  margin: 1rem auto;
+  border-radius: 15px;
+}
+.moment__title {
+  padding: 1rem;
+  border: 1px black solid;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+.moment__gallery {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
 /*# sourceMappingURL=timeline.css.map */

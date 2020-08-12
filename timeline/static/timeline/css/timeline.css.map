@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/timeline.sass"],"names":[],"mappings":"AAAA;EACE;EACA;EACA","file":"timeline.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/timeline.sass","../sass/_variables.sass"],"names":[],"mappings":"AAEA;EACE;EACA;EACA;;;AAEF;EACE,YCNc;EDOd;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAEF;EACE;EACA","file":"timeline.css"}

@@ -1,4 +1,22 @@
+@import 'variables'
+  
 body
   background: url("/static/timeline/images/time_background.jpg")
   background-repeat: no-repeat
   background-size: auto
+
+.moment
+  background: $primary-color
+  width: 50%
+  margin: 1rem auto
+  border-radius: 15px
+
+  &__title
+    padding: 1rem
+    border: 1px black solid
+    border-top-left-radius: inherit
+    border-top-right-radius: inherit
+
+  &__gallery
+    border-bottom-left-radius: inherit
+    border-bottom-right-radius: inherit
