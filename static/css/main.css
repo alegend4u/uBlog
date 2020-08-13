@@ -63,8 +63,8 @@ a {
   right: 2rem;
   transform: translateY(-50%);
   z-index: 2;
-  height: 20px;
-  width: 28px;
+  height: 1.2rem;
+  width: 1.6rem;
 }
 .nav .menu-btn .burger {
   display: block;
@@ -73,9 +73,16 @@ a {
   margin: 5px;
   border-radius: 2px;
   background: #c2c2c2;
+  transition: all 0.3s ease-in-out;
 }
-.nav .menu-btn .burger:hover {
-  color: white;
+.nav .menu-btn.open .middle {
+  visibility: hidden;
+}
+.nav .menu-btn.open .upper {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.nav .menu-btn.open .lower {
+  transform: rotate(45deg) translate(-6px, -6px);
 }
 
 @media screen and (max-width: 900px) {
