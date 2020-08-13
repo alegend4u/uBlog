@@ -2,23 +2,63 @@ body {
   background: url("/static/timeline/images/time_background.jpg");
   background-repeat: no-repeat;
   background-size: auto;
+  background-attachment: fixed;
 }
 
 .moment {
-  background: #c2c2c2;
   width: 50%;
   margin: 1rem auto;
+  margin-bottom: 1.5rem;
   border-radius: 15px;
+  background: white;
+  box-shadow: 0 0 15px #888888;
+  padding-bottom: 1.5rem;
 }
 .moment__title {
+  color: white;
+  background: #1f1f1f;
   padding: 1rem;
   border: 1px black solid;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
 .moment__gallery {
-  border-bottom-left-radius: inherit;
-  border-bottom-right-radius: inherit;
+  background: #2d93ad;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.moment__gallery img {
+  border-radius: 3px;
+  margin: 1rem;
+  box-shadow: 0 0 10px 2px black;
+}
+.moment p {
+  margin: 1rem 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .nav .navbar {
+    visibility: hidden;
+  }
+  .nav .menu-btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .nav .navbar {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .moment {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .moment {
+    width: 95%;
+  }
 }
 
 /*# sourceMappingURL=timeline.css.map */

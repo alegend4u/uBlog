@@ -1,22 +1,41 @@
 @import 'variables'
-  
+@import 'mixins'
+
 body
   background: url("/static/timeline/images/time_background.jpg")
   background-repeat: no-repeat
   background-size: auto
+  background-attachment: fixed
 
 .moment
-  background: $primary-color
   width: 50%
   margin: 1rem auto
+  margin-bottom: 1.5rem
   border-radius: 15px
+  background: white
+  box-shadow: 0 0 15px #888888
+  padding-bottom: 1.5rem
 
   &__title
+    color: white
+    background: $other-color
     padding: 1rem
     border: 1px black solid
     border-top-left-radius: inherit
     border-top-right-radius: inherit
 
   &__gallery
-    border-bottom-left-radius: inherit
-    border-bottom-right-radius: inherit
+    background: $secondary-background
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+
+    img
+      border-radius: 3px
+      margin: 1rem
+      box-shadow: 0 0 10px 2px black
+
+  p
+    margin: 1rem 2rem
+
+@import 'responsive'
