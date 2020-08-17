@@ -6,12 +6,12 @@
 @include media-sm
   .nav
     .navbar
-      transform: translateY(100%)
+      transform: translateY(-100%)
       background: $primary-background
       position: fixed
       top: 0
       left: 0
-      height: 100vh
+      height: 90vh
       width: 100vw
       opacity: 0.95
       z-index: 4
@@ -19,6 +19,10 @@
       align-items: center
       justify-content: space-evenly
       @include transition-ease
+
+      &__item
+        margin: 2rem
+
 
     .menu-btn
       display: block

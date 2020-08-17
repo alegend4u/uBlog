@@ -94,12 +94,12 @@ a {
 }
 @media screen and (max-width: 900px) {
   .nav .navbar {
-    transform: translateY(100%);
+    transform: translateY(-100%);
     background: #040303;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     opacity: 0.95;
     z-index: 4;
@@ -107,6 +107,9 @@ a {
     align-items: center;
     justify-content: space-evenly;
     transition: all 0.3s ease-in-out;
+  }
+  .nav .navbar__item {
+    margin: 2rem;
   }
   .nav .menu-btn {
     display: block;
