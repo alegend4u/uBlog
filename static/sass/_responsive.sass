@@ -1,14 +1,24 @@
-@include media-sm
-  .nav
-
-    .navbar
-      visibility: hidden
-
-    .menu-btn
-      display: block
-
-
 @include media-lg
   .nav
     .navbar
       justify-content: flex-end
+  
+@include media-sm
+  .nav
+    .navbar
+      transform: translateY(100%)
+      background: $primary-background
+      position: fixed
+      top: 0
+      left: 0
+      height: 100vh
+      width: 100vw
+      opacity: 0.95
+      z-index: 4
+      flex-flow: column wrap
+      align-items: center
+      justify-content: space-evenly
+      @include transition-ease
+
+    .menu-btn
+      display: block

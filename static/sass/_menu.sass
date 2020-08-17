@@ -32,7 +32,6 @@
 
     &__item
       font-size: 1.1rem
-      font-weight: bold
       color: $primary-color
       padding-right: 2rem
       @include transition-ease
@@ -40,13 +39,16 @@
       &:hover
         color: white
 
+    &.open
+      transform: translateY(0)
+
   .menu-btn
     display: none
     position: absolute
     top: 50%
     right: 2rem
     transform: translateY(-50%)
-    z-index: 2
+    z-index: 5
     height: 1.2rem
     width: 1.6rem
 
@@ -67,5 +69,5 @@
         transform: rotate(-45deg) translate(-6px, 6px)
 
       .lower
-        transform: rotate(45deg) translate(-6px, -6px)
+        transform: rotate(45deg) translate(-6px, -7px)
 
