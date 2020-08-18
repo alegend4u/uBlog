@@ -99,7 +99,7 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    height: 90vh;
+    bottom: 5rem;
     width: 100vw;
     opacity: 0.95;
     z-index: 4;
@@ -109,7 +109,7 @@ a {
     transition: all 0.3s ease-in-out;
   }
   .nav .navbar__item {
-    margin: 2rem;
+    padding: 0;
   }
   .nav .menu-btn {
     display: block;
