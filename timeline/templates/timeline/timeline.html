@@ -14,13 +14,16 @@
 <div>
     {% for moment in moments %}
     <div class="moment">
-        <h5 class="moment__title">{{ moment.title }}: {{ moment.description }}</h5>
+        <h5 class="moment__title">{{ moment.title }}: {{ moment.description }} | <span>{{ moment.get_friendly_timestamp }}</span>
+        </h5>
         <div class="moment__gallery">
             {% for media in moment.get_gallery %}
             <img src="{{ media.file.url }}" height="100" alt="{{ media.file.name }}"/>
             {% endfor %}
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis perferendis sit perspiciatis. Veritatis sit necessitatibus alias, reiciendis nesciunt eveniet inventore nisi. Modi quaerat molestiae dolorem facere, explicabo quia sint.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis perferendis sit perspiciatis.
+            Veritatis sit necessitatibus alias, reiciendis nesciunt eveniet inventore nisi. Modi quaerat molestiae
+            dolorem facere, explicabo quia sint.</p>
     </div>
     {% endfor %}
 </div>

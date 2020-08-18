@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+body {
+  padding-bottom: 5rem;
+}
+
 .nav {
   position: fixed;
   bottom: 0;
@@ -37,6 +41,9 @@ a {
   padding: 1rem;
   color: #c2c2c2;
   transition: all 0.3s ease-in-out;
+}
+.nav .title:hover {
+  text-shadow: 0 0 1px white;
 }
 .nav .navbar {
   display: flex;

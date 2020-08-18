@@ -4,6 +4,8 @@ from pathlib import Path
 import mimetypes
 from django.db import models
 
+from timeline import utils
+
 TEXT_SHORT = 25
 SMALL_TEXT = 256
 LARGE_TEXT = 1500
@@ -20,6 +22,9 @@ class Moment(models.Model):
 
     def get_gallery(self):
         return self.gallery.get_queryset()
+
+    def get_friendly_timestamp(self):
+        return utils.pretty_date(self.timestamp)
 
 
 def moment_gallery_path(instance, filename):
