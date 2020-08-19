@@ -8,34 +8,47 @@ body
   background-attachment: fixed
 
 .moment
-  width: 50%
+  width: 60%
   margin: 1rem auto
   margin-bottom: 1.5rem
   border-radius: 10px
   background: white
-  box-shadow: 0 0 15px #888888
-  padding-bottom: 1.5rem
+  box-shadow: 0 0 20px 0 black
 
-  &__title
+  &__head
+    display: flex
+    justify-content: space-between
     color: white
     background: $other-color
     padding: 1rem
     border: 1px black solid
     border-top-left-radius: inherit
     border-top-right-radius: inherit
+    font-size: 1rem
 
-  &__gallery
-    background: $secondary-background
+    &__title
+      font-weight: bold
+
+    &__time
+      font-style: italic
+
+  &__body
     display: flex
-    flex-wrap: wrap
-    justify-content: space-evenly
 
-    img
-      border-radius: 3px
-      margin: 1rem
-      box-shadow: 0 0 10px 2px black
+    p
+      margin: 1rem 2rem
 
-  p
-    margin: 1rem 2rem
+    &__gallery
+      background: $secondary-background
+      display: grid
+      padding: 1rem
+      height: inherit
+
+      img
+        width: 200px
+        border-radius: 3px
+        margin: 0.2rem
+        box-shadow: 0 0 10px 0 black
+
 
 @import 'responsive'

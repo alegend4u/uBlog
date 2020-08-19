@@ -3,28 +3,34 @@
 {% load static %}
 
 {% block title %}
-<title>Timeline</title>
+    <title>Timeline</title>
 {% endblock %}
 
 {% block extracss %}
-<link rel="stylesheet" href="{% static 'timeline/css/timeline.css' %}">
+    <link rel="stylesheet" href="{% static 'timeline/css/timeline.css' %}">
 {% endblock %}
 
 {% block content %}
-<div>
-    {% for moment in moments %}
-    <div class="moment">
-        <h5 class="moment__title">{{ moment.title }}: {{ moment.description }} | <span>{{ moment.get_friendly_timestamp }}</span>
-        </h5>
-        <div class="moment__gallery">
-            {% for media in moment.get_gallery %}
-            <img src="{{ media.file.url }}" height="100" alt="{{ media.file.name }}"/>
-            {% endfor %}
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis perferendis sit perspiciatis.
-            Veritatis sit necessitatibus alias, reiciendis nesciunt eveniet inventore nisi. Modi quaerat molestiae
-            dolorem facere, explicabo quia sint.</p>
+    <div>
+        {% for moment in moments %}
+            <div class="moment">
+                <div class="moment__head">
+                    <span class="moment__head__title">{{ moment.title }}: {{ moment.description }}</span>
+                    <span class="moment__head__time">{{ moment.get_friendly_timestamp }}</span>
+                </div>
+                <div class="moment__body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis perferendis sit
+                        perspiciatis.
+                        Veritatis sit necessitatibus alias, reiciendis nesciunt eveniet inventore nisi. Modi quaerat
+                        molestiae
+                        dolorem facere, explicabo quia sint.</p>
+                    <div class="moment__body__gallery">
+                        {% for media in moment.get_gallery %}
+                            <img src="{{ media.file.url }}" alt="{{ media.file.name }}"/>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 {% endblock %}
