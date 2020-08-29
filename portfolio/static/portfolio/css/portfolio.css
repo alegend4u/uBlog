@@ -20,29 +20,29 @@
   margin: 0 auto;
   width: 60%;
 }
-
-.job {
+.container__item {
   margin: inherit;
-  padding: 1rem 0;
+  padding: 2rem 0 1rem 0;
 }
-.job * {
-  padding-top: 1rem;
+.container__item * {
+  padding-bottom: 1rem;
 }
-.job .flex {
+.container__item .flex {
   font-size: 1.5rem;
+  align-items: center;
 }
-.job .flex .job-title {
+.container__item .flex .title {
   color: #2d93ad;
 }
-.job .flex .duration {
+.container__item .flex .duration {
   color: gray;
   font-size: 0.8em;
   font-style: italic;
 }
-.job__company {
+.container__item__subtitle {
   font-size: 1.1rem;
 }
-.job__description {
+.container__item__description {
   text-align: justify;
 }
 
