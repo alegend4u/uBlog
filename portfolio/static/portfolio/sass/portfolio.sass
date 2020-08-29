@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap')
+@import 'variables'
+@import 'mixins'
+
+.flex
+  display: flex
+  justify-content: space-between
+
+.banner
+  background: $other-color
+  color: white
+  font-family: 'Quicksand', sans-serif
+  font-weight: lighter
+  font-size: 2rem
+  text-transform: uppercase
+  padding: 2rem 0
+  text-align: center
+  opacity: 90%
+
+
+.container
+  margin: 0 auto
+  width: 60%
+
+
+.job
+  margin: inherit
+  padding: 1rem 0
+
+  *
+    padding-top: 1rem
+
+  .flex
+    font-size: 1.5rem
+
+    .job-title
+      color: $secondary-background
+
+    .duration
+      color: gray
+      font-size: 0.8em
+      font-style: italic
+
+  &__company
+    font-size: 1.1rem
+
+  &__description
+    text-align: justify
+
+@import 'responsive'

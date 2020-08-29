@@ -1,9 +1,49 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
-<title>Portfolio</title>
+    <title>Portfolio</title>
+{% endblock %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/portfolio.css' %}">
 {% endblock %}
 
 {% block content %}
-Building it...
+    <div class="banner">Experience</div>
+    <div class="container" id="experience">
+        <div class="job">
+            <div class="flex">
+                <p class="job-title">Programmer Analyst - AI Department</p>
+                <p class="duration">December 2020 - Present</p>
+            </div>
+            <p class="job__company">Dosepack LLP, Meditab Softwares Inc., India</p>
+            <p class="job__description">Lorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsumLorem ipsum
+
+            </p>
+        </div>
+        <div class="job">
+            <div class="flex">
+                <p class="job-title">Full Stack Developer Summer Intern</p>
+                <p class="duration">May 2018 - July 2018</p>
+            </div>
+            <p class="job__company">Limelight Innovations, Ahmedabad</p>
+            <p class="job__description">Lorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                Lorem ipsumLorem ipsum
+
+            </p>
+        </div>
+    </div>
 {% endblock %}

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  background: #1f1f1f;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  font-weight: lighter;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+  text-align: center;
+  opacity: 90%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.job {
+  margin: inherit;
+  padding: 1rem 0;
+}
+.job * {
+  padding-top: 1rem;
+}
+.job .flex {
+  font-size: 1.5rem;
+}
+.job .flex .job-title {
+  color: #2d93ad;
+}
+.job .flex .duration {
+  color: gray;
+  font-size: 0.8em;
+  font-style: italic;
+}
+.job__company {
+  font-size: 1.1rem;
+}
+.job__description {
+  text-align: justify;
+}
+
+@media screen and (max-width: 1300px) {
+  .nav .navbar {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 900px) {
+  .nav .navbar {
+    transform: translateY(-100%);
+    background: #040303;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 5rem;
+    width: 100vw;
+    opacity: 0.95;
+    z-index: 4;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav .navbar__item {
+    padding: 0;
+  }
+  .nav .menu-btn {
+    display: block;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/*# sourceMappingURL=portfolio.css.map */
