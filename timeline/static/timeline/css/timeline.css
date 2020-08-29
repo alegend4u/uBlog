@@ -35,9 +35,11 @@ body {
   border-radius: inherit;
 }
 .moment__body p {
+  width: 40%;
   padding: 1rem 2rem;
 }
 .moment__body__gallery {
+  width: 60%;
   background: #2d93ad;
   display: grid;
   padding: 1rem;
