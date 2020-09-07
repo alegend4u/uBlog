@@ -54,60 +54,34 @@
   padding: 1.5rem 0;
 }
 #projects .project {
+  cursor: pointer;
+  border: 4px solid white;
   border-radius: 5px;
   box-shadow: 0 0 10px gray;
   position: relative;
-  overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
 #projects .project img {
   max-width: 100%;
 }
 #projects .project:hover {
-  box-shadow: 0 0 150px gray;
+  box-shadow: 0 0 100px gray;
 }
 #projects .project:hover .title {
   opacity: 1;
-  transform: translateY(0);
-}
-#projects .project:hover .project__btns {
-  opacity: 1;
-  transform: translateY(-50%);
 }
 #projects .project .title {
   position: absolute;
   top: 0;
-  transform: translateY(-100%);
   width: 100%;
   opacity: 0;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.6);
-  color: #c2c2c2;
+  background: #040303;
+  color: #2d93ad;
   font-size: 1.5rem;
   text-align: center;
   padding: 1rem;
   transition: all 0.3s ease-in-out;
-}
-#projects .project__btns {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%);
-  width: 100%;
-  opacity: 0;
-  z-index: 2;
-  background: rgba(0, 0, 0, 0.8);
-  transition: all 0.3s ease-in-out;
-}
-#projects .project__btns a {
-  width: 100%;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-#projects .project__btns a i {
-  padding-right: 5px;
 }
 
 @media screen and (max-width: 1300px) {
