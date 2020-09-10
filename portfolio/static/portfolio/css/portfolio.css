@@ -5,6 +5,9 @@
 }
 
 .banner {
+  z-index: 1;
+  position: sticky;
+  top: 0;
   background: #1f1f1f;
   color: white;
   font-family: "Quicksand", sans-serif;
