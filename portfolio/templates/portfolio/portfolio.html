@@ -3,83 +3,85 @@
 {% load static %}
 
 {% block title %}
-<title>Portfolio</title>
+    <title>Portfolio</title>
 {% endblock %}
 
 {% block extracss %}
-<link rel="stylesheet" href="{% static 'portfolio/css/portfolio.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/portfolio.css' %}">
 {% endblock %}
 
 {% block content %}
-<div>
-    <div class="banner">Projects</div>
-    <div class="container" id="projects">
-        <div class="project">
-            <img src="{% static 'portfolio/images/music.png' %}" alt="Project Image">
-            <p class="title">Music Recommendation System</p>
+    <div class="section">
+        <div class="banner">Projects</div>
+        <div class="container" id="projects">
+            <div class="project">
+                <img src="{% static 'portfolio/images/music.png' %}" alt="Music Recommendation System">
+                <p class="title">Music Recommendation System</p>
+            </div>
+            <div class="project">
+                <img src="{% static 'portfolio/images/unifiedit.jpg' %}" alt="UnifiedIT">
+                <p class="title">UnifiedIT - Institute Management System</p>
+            </div>
         </div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
     </div>
-</div>
-<div>
-<div class="banner">Experience</div>
-<div class="container" id="experience">
-    <div class="container__item">
-        <div class="flex">
-            <p class="title">Programmer Analyst - AI Department</p>
-            <p class="duration">December 2020 - Present</p>
-        </div>
-        <p class="container__item__subtitle">Dosepack LLP, Meditab Softwares Inc., India</p>
-        <p class="container__item__description">Lorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsumLorem ipsum
+    <div class="section">
+        <div class="banner">Experience</div>
+        <div class="container" id="experience">
+            <div class="container__item">
+                <div class="flex">
+                    <p class="title">Programmer Analyst - AI Department</p>
+                    <p class="duration">December 2020 - Present</p>
+                </div>
+                <p class="container__item__subtitle">Dosepack LLP, Meditab Softwares Inc., India</p>
+                <p class="container__item__description">Lorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                    ipsum
+                    Lorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsum
 
-        </p>
-    </div>
-    <div class="container__item">
-        <div class="flex">
-            <p class="title">Full Stack Developer Summer Intern</p>
-            <p class="duration">May 2018 - July 2018</p>
-        </div>
-        <p class="container__item__subtitle">Limelight Innovations, Ahmedabad</p>
-        <p class="container__item__description">Lorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-            Lorem ipsumLorem ipsum
+                </p>
+            </div>
+            <div class="container__item">
+                <div class="flex">
+                    <p class="title">Full Stack Developer Summer Intern</p>
+                    <p class="duration">May 2018 - July 2018</p>
+                </div>
+                <p class="container__item__subtitle">Limelight Innovations, Ahmedabad</p>
+                <p class="container__item__description">Lorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                    ipsum
+                    Lorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsum
 
-        </p>
-    </div>
-</div>
-</div>
-<div>
-<div class="banner">Education</div>
-<div class="container" id="education">
-    <div class="container__item">
-        <div class="flex">
-            <p class="title">Faculty of Technology, Dharmsinh Desai University, Nadiad</p>
-            <p class="duration">July 2016 - May 2020</p>
+                </p>
+            </div>
         </div>
-        <p class="container__item__subtitle">Bachelor of Technology</p>
-        <p>Course: Information Technology</p>
     </div>
-    <div class="container__item">
-        <div class="flex">
-            <p class="title">Smt. M. M. Mehta English Medium School</p>
-        </div>
-        <p>Palanpur, India</p>
-    </div>
+    <div class="section">
+        <div class="banner">Education</div>
+        <div class="container" id="education">
+            <div class="container__item">
+                <div class="flex">
+                    <p class="title">Faculty of Technology, Dharmsinh Desai University, Nadiad</p>
+                    <p class="duration">July 2016 - May 2020</p>
+                </div>
+                <p class="container__item__subtitle">Bachelor of Technology</p>
+                <p>Course: Information Technology</p>
+            </div>
+            <div class="container__item">
+                <div class="flex">
+                    <p class="title">Smt. M. M. Mehta English Medium School</p>
+                </div>
+                <p>Palanpur, India</p>
+            </div>
 
-</div>
-</div>
-<script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
 {% endblock %}

@@ -6,10 +6,15 @@
   display: flex
   justify-content: space-between
 
+.section
+  min-height: 100vh
+  width: 100vw
+
 .banner
   z-index: 1
   position: sticky
   top: 0
+  height: $banner-height
   background: $other-color
   color: white
   font-family: 'Quicksand', sans-serif
@@ -22,10 +27,10 @@
 
 .container
   margin: 0 auto
+  margin-top: $banner-height
   width: 65%
 
   &__item
-    margin: inherit
     padding: 2rem 0 1rem 0
 
     *
@@ -53,8 +58,9 @@
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))
   grid-auto-rows: 22rem
-  grid-gap: 2rem
+  grid-gap: 4rem
   padding: 1.5rem 0
+  margin: 0 auto
 
   .project
     cursor: pointer
@@ -65,7 +71,9 @@
     @include transition-ease
 
     img
-      max-width: 100%
+      width: 100%
+      height: 100%
+      object-fit: cover
 
     &:hover
       box-shadow: 0 0 100px gray
@@ -81,8 +89,8 @@
       z-index: 2
 
       background: $primary-background
-      color: $secondary-background
-      font-size: 1.5rem
+      color: white
+      font-size: 1rem
       text-align: center
       padding: 1rem
       @include transition-ease
