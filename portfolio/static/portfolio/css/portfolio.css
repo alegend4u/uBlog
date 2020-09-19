@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300400500600700&display=swap");
 .flex {
   display: flex;
   justify-content: space-between;
@@ -16,8 +16,7 @@
   height: 6.5rem;
   background: #1f1f1f;
   color: white;
-  font-family: "Quicksand", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2rem 0;
@@ -94,6 +93,55 @@
   text-align: center;
   padding: 1rem;
   transition: all 0.3s ease-in-out;
+}
+
+.scroll_btns {
+  z-index: 2;
+  position: fixed;
+  bottom: 6rem;
+  right: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scroll_btns .scroll_btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 0.8rem;
+}
+.scroll_btns .scroll_btn i {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-color: #c2c2c2;
+  transition: all 0.3s ease-in-out;
+}
+.scroll_btns .scroll_btn:hover i {
+  border-color: white;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 1300px) {
