@@ -2,13 +2,15 @@
 @import 'variables'
 @import 'mixins'
 
+.html
+  scroll-behavior: smooth
+
 .flex
   display: flex
   justify-content: space-between
 
 .section
   min-height: 100vh
-  width: 100vw
 
 .banner
   z-index: 1
@@ -25,8 +27,7 @@
   opacity: 90%
 
 .container
-  margin: 0 auto
-  margin-top: $banner-height
+  margin: $banner-height auto 0
   width: 65%
 
   &__item
