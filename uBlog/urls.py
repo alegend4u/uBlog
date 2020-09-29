@@ -18,6 +18,7 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import RedirectView
 
 from portfolio import views as p_views
 
@@ -27,4 +28,5 @@ urlpatterns = [
                   url(r'^timeline/', include('timeline.urls')),
                   url(r'^portfolio', p_views.portfolio),
                   url(r'^contact', p_views.contact),
+                  url(r'^favicon\.ico', RedirectView.as_view(url='/static/images/favicon.ico'))
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
