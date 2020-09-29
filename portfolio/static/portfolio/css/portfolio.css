@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300400500600700&display=swap");
+@keyframes animatetop {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -146,7 +158,6 @@ html {
   transform: rotate(45deg);
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -158,31 +169,35 @@ html {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
-/* Modal Content */
-.modal-content {
+.modal .modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
+  box-shadow: 0 0 150px #333;
+  border-radius: 5px;
   padding: 20px;
-  border: 1px solid #888;
   width: 60%;
   max-width: 100%;
   max-height: 100%;
+  animation-name: animatetop;
+  animation-duration: 0.3s;
 }
-
-.close {
-  color: #aaaaaa;
+.modal .modal-content .close {
+  color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-.close:hover, .close:focus {
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
   cursor: pointer;
   text-decoration: none;
   color: black;
+}
+
+.modal_open {
+  display: block;
 }
 
 @media screen and (max-width: 1300px) {

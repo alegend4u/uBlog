@@ -11,24 +11,28 @@ uit = document.querySelector('#project_uit')
 modalCloseButtons.forEach((closeButton) => {
     closeButton.onclick = function () {
         modal = this.parentElement.parentElement
-        modal.style.display = 'none'
+        // modal.style.display = 'none'
+        modal.classList.remove('modal_open')
     }
 })
 
 window.onclick = function (event) {
     if (event.target.classList.contains('modal')){
-        event.target.style.display = 'none'
+        // event.target.style.display = 'none'
+        event.target.classList.remove('modal_open')
     }
 }
 
 music.addEventListener('click', function () {
     music_modal = document.querySelector("#modal-music")
-    music_modal.style.display = 'block'
+    // music_modal.style.display = 'block'
+    music_modal.classList.add('modal_open')
 })
 
 uit.addEventListener('click', function () {
     uit_modal = document.querySelector('#modal-uit')
-    uit_modal.style.display = 'block'
+    // uit_modal.style.display = 'block'
+    uit_modal.classList.add('modal_open')
 })
 
 
