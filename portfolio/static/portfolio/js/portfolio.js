@@ -3,6 +3,34 @@ const scrollUp = scrollButtons[0]
 const scrollDown = scrollButtons[1]
 const sections = Array.from(document.querySelectorAll('.section'))
 const sectionPositions = sections.map(section => section.offsetTop)
+const modalCloseButtons = document.querySelectorAll('.modal .close')
+
+music = document.querySelector('#project_music')
+uit = document.querySelector('#project_uit')
+
+modalCloseButtons.forEach((closeButton) => {
+    closeButton.onclick = function () {
+        modal = this.parentElement.parentElement
+        modal.style.display = 'none'
+    }
+})
+
+window.onclick = function (event) {
+    if (event.target.classList.contains('modal')){
+        event.target.style.display = 'none'
+    }
+}
+
+music.addEventListener('click', function () {
+    music_modal = document.querySelector("#modal-music")
+    music_modal.style.display = 'block'
+})
+
+uit.addEventListener('click', function () {
+    uit_modal = document.querySelector('#modal-uit')
+    uit_modal.style.display = 'block'
+})
+
 
 scrollUp.addEventListener('click', scrollToPreviousSection)
 scrollDown.addEventListener('click', scrollToNextSection)
@@ -13,14 +41,11 @@ function scrollToPreviousSection() {
     let minDistance = Infinity
     for (let i = 0; i < sectionPositions.length; i += 1) {
         let distance = currentPos - sectionPositions[i]
-        console.log('prev' + distance)
         if (distance > 0 && distance < minDistance) {
             minDistance = distance
             nearestSectionIdx = i
-            // console.log('got prev nearest idx' + nearestSectionIdx)
         }
     }
-    console.log('-----')
     sections[nearestSectionIdx].scrollIntoView()
 }
 
@@ -30,16 +55,13 @@ function scrollToNextSection() {
     let minDistance = Infinity;
     for (let i = 0; i < sectionPositions.length; i += 1) {
         const distance = sectionPositions[i] - currentPos;
-        console.log('next' + distance)
         if (distance > 0 && distance < minDistance) {
             minDistance = distance
             nearestSectionIdx = i
-            // console.log('got next nearest idx' + nearestSectionIdx)
         }
     }
     if (nearestSectionIdx == null) {
         nearestSectionIdx = sections.length - 1
     }
-    console.log('-----')
     sections[nearestSectionIdx].scrollIntoView()
 }

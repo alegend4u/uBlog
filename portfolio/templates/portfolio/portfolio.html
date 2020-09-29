@@ -14,11 +14,11 @@
     <div class="section">
         <div class="banner">Projects</div>
         <div class="container" id="projects">
-            <div class="project">
+            <div class="project" id="project_music">
                 <img src="{% static 'portfolio/images/music.png' %}" alt="Music Recommendation System">
                 <p class="title">Music Recommendation System</p>
             </div>
-            <div class="project">
+            <div class="project" id="project_uit">
                 <img src="{% static 'portfolio/images/unifiedit.jpg' %}" alt="UnifiedIT">
                 <p class="title">UnifiedIT - Institute Management System</p>
             </div>
@@ -83,10 +83,25 @@
 
         </div>
     </div>
-    <div class="scroll_btns">
+    <div class="scroll_buttons">
         <div class="scroll_btn"><i class="arrow up"></i></div>
         <div class="scroll_btn"><i class="arrow down"></i></div>
     </div>
+
+    {# Modals #}
+    <div class="modal" id="modal-uit">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            Put unifiedit content here.
+        </div>
+    </div>
+    <div class="modal" id="modal-music">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            Put music recommendation system content here.
+        </div>
+    </div>
+
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
     <script src="{% static 'portfolio/js/portfolio.js' %}"></script>
 {% endblock %}
