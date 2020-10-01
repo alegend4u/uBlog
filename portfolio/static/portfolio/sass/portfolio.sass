@@ -169,7 +169,6 @@ html
     box-shadow: 0 0 150px #333
     border-radius: 5px
 
-    padding: 20px
     width: 60%
     max-width: 100%
     max-height: 100%
@@ -178,15 +177,58 @@ html
     animation-duration: 0.3s
 
     .close
-      color: #aaa
+      color: white
       float: right
-      font-size: 28px
+      font-size: 2rem
       font-weight: bold
 
       &:hover, &:focus
         cursor: pointer
         text-decoration: none
         color: black
+
+    .modal-header
+      width: 100%
+      background: $secondary-background
+      color: white
+      font-size: 1.5rem
+      padding: 1.25rem
+
+    .modal-body
+      display: flex
+      flex-wrap: wrap
+
+      .description
+        position: relative
+        width: 50%
+
+        p
+          padding: 1.25rem
+
+        .github_link
+          position: absolute
+          bottom: 15px
+          width: 100%
+          border-radius: inherit
+          text-align: center
+
+          .fa-github
+            padding: 1.25rem
+            font-size: 4rem
+            text-shadow: 0 0 5px gray
+            @include transition-ease
+
+            &:hover
+              text-shadow: 0 0 20px gray
+              background: #ddd
+              border-radius: 5px
+
+      .project_gallery
+        width: 50%
+        height: 20rem
+        background: $primary-color
+
+
 
 .modal_open
   display: block
