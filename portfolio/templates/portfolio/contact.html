@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
-<title>Contact Me</title>
+    <title>Contact Me</title>
+{% endblock %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/contact.css' %}">
 {% endblock %}
 
 {% block content %}
-Let's connect...
+    <div class="split">
+        <div class="contact_info"></div>
+        <img src="{% static 'portfolio/images/contact_image.jpeg' %}" alt="My another image here.">
+    </div>
 {% endblock %}
