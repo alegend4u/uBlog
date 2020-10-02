@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
+* {
+  text-shadow: 1px 2px 0 black;
+}
+
+form input, form textarea {
+  display: block;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+.split {
+  display: flex;
+  height: calc(100vh - 5rem);
+  width: 100vw;
+}
+.split .contact_info {
+  width: 100%;
+  background-color: #505A5B;
+  color: white;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+}
+.split .contact_info .header_text {
+  padding-top: 3rem;
+  font-family: "Secular One", sans-serif;
+  font-size: 3rem;
+}
+.split .contact_info .subtitle_text {
+  font-family: "Allura", cursive;
+  font-size: 3rem;
+  text-align: right;
+}
+.split .contact_info .feedback_form {
+  width: fit-content;
+  margin: 2rem auto;
+  border: 2px solid #c2c2c2;
+  border-radius: 4px;
+  padding: 2rem;
+  box-shadow: 1px 2px 0 black;
+}
+.split .contact_info .feedback_form:focus {
+  border-color: white;
+}
+.split .contact_info .feedback_form * {
+  border-color: #c2c2c2;
+  transition: all 0.3s ease-in-out;
+}
+.split .contact_info .feedback_form textarea {
+  height: 10rem;
+  resize: none;
+}
+.split .contact_info .feedback_form input[type=text], .split .contact_info .feedback_form textarea {
+  width: 30rem;
+  margin: 0.5rem 0 1.5rem 0;
+  font-size: 1rem;
+  color: white;
+}
+.split .contact_info .feedback_form input[type=text]:focus, .split .contact_info .feedback_form textarea:focus {
+  border-color: white;
+}
+.split img {
+  box-shadow: 0 0 10px black;
+  height: inherit;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=contact.css.map */

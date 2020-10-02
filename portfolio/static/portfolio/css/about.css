@@ -1,0 +1,7 @@
+.landing_image {
+  object-fit: cover;
+  width: 100%;
+  height: calc(100vh - 5rem);
+}
+
+/*# sourceMappingURL=about.css.map */
