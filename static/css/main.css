@@ -17,6 +17,17 @@ a {
   text-decoration: none;
 }
 
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+input[type=text], textarea {
+  border: none;
+  background: inherit;
+  border-bottom: 2px solid black;
+  height: 2rem;
+}
+
 .nav {
   position: fixed;
   bottom: 0;

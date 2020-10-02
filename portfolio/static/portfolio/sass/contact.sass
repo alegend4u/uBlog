@@ -1,12 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap')
 @import variables
+@import mixins
+
+*
+  text-shadow: 1px 2px 0 black
+
+form
+  input, textarea
+    display: block
+
+::placeholder
+  color: #bbb
 
 .split
   display: flex
   height: calc(100vh - #{$nav-height})
+  width: 100vw
 
   .contact_info
-    flex: 1
+    width: 100%
     background-color: #505A5B
+    color: white
+    padding: 0 3rem
+    font-size: 1.5rem
+
+    .header_text
+      padding-top: 3rem
+      font-family: 'Secular One', sans-serif
+      font-size: 3rem
+
+    .subtitle_text
+      font-family: 'Allura', cursive
+      font-size: 3rem
+      text-align: right
+
+
+    .feedback_form
+      width: fit-content
+      margin: 2rem auto
+      border: 2px solid $primary-color
+      border-radius: 4px
+      padding: 2rem
+      box-shadow: 1px 2px 0 black
+
+
+      &:focus
+        border-color: white
+
+      *
+        border-color: $primary-color
+        @include transition-ease
+
+      textarea
+        height: 10rem
+        resize: none
+
+      input[type='text'], textarea
+        width: 30rem
+        margin: 0.5rem 0 1.5rem 0
+        font-size: 1rem
+        color: white
+
+        &:focus
+          border-color: white
+
 
   img
     box-shadow: 0 0 10px black
