@@ -17,10 +17,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  padding-bottom: 5rem;
-}
-
 .nav {
   position: fixed;
   bottom: 0;

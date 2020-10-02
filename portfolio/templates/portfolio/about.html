@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}
-<title>Rishabh Prajapati</title>
+    <title>Rishabh Prajapati</title>
+{% endblock %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'portfolio/css/about.css' %}">
 {% endblock %}
 
 {% block content %}
-More about me here...
+    <div class="landing">
+        <img src="{% static 'portfolio/images/landing.png' %}" alt="Landing image" class="landing_image">
+    </div>
 {% endblock %}
