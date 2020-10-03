@@ -8,8 +8,13 @@ form input, form textarea {
   display: block;
 }
 
+::selection {
+  background: #c2c2c2;
+}
+
 ::placeholder {
   color: #bbb;
+  text-align: right;
 }
 
 .split {
@@ -36,31 +41,56 @@ form input, form textarea {
 }
 .split .contact_info .feedback_form {
   width: fit-content;
-  margin: 2rem auto;
-  border: 2px solid #c2c2c2;
+  margin: 2rem 0 2rem auto;
   border-radius: 4px;
-  padding: 2rem;
-  box-shadow: 1px 2px 0 black;
 }
 .split .contact_info .feedback_form:focus {
   border-color: white;
 }
 .split .contact_info .feedback_form * {
+  margin-left: auto;
   border-color: #c2c2c2;
   transition: all 0.3s ease-in-out;
+}
+.split .contact_info .feedback_form input[type=text], .split .contact_info .feedback_form textarea {
+  border: none;
+  border-right: 2px solid #aaa;
+  padding: 1rem;
+  width: 30rem;
+  margin: 0.5rem 0 1.5rem 0;
+  text-align: right;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+.split .contact_info .feedback_form input[type=text]:focus, .split .contact_info .feedback_form textarea:focus {
+  border-color: white;
 }
 .split .contact_info .feedback_form textarea {
   height: 10rem;
   resize: none;
+  text-align: left;
 }
-.split .contact_info .feedback_form input[type=text], .split .contact_info .feedback_form textarea {
-  width: 30rem;
-  margin: 0.5rem 0 1.5rem 0;
-  font-size: 1rem;
+.split .contact_info .feedback_form .submit_button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  position: relative;
+  bottom: 4px;
+  text-transform: uppercase;
   color: white;
+  background: darkcyan;
+  text-shadow: none;
+  box-shadow: 0 4px 0 #4a4a4a;
+  transition: all 0.1s linear 0s;
 }
-.split .contact_info .feedback_form input[type=text]:focus, .split .contact_info .feedback_form textarea:focus {
-  border-color: white;
+.split .contact_info .feedback_form .submit_button:hover {
+  bottom: 3px;
+  box-shadow: 0 3px 0 #444;
+}
+.split .contact_info .feedback_form .submit_button:active {
+  bottom: 0;
+  box-shadow: 0 0 0 #444;
 }
 .split img {
   box-shadow: 0 0 10px black;

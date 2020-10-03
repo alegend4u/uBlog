@@ -10,8 +10,13 @@ form
   input, textarea
     display: block
 
+::selection
+  background: $primary-color
+  //color: black
+
 ::placeholder
   color: #bbb
+  text-align: right
 
 .split
   display: flex
@@ -38,34 +43,61 @@ form
 
     .feedback_form
       width: fit-content
-      margin: 2rem auto
-      border: 2px solid $primary-color
+      margin: 2rem 0 2rem auto
       border-radius: 4px
-      padding: 2rem
-      box-shadow: 1px 2px 0 black
 
 
       &:focus
         border-color: white
 
       *
+        margin-left: auto
         border-color: $primary-color
         @include transition-ease
 
-      textarea
-        height: 10rem
-        resize: none
-
       input[type='text'], textarea
+        border: none
+        border-right: 2px solid #aaa
+
+        padding: 1rem
         width: 30rem
         margin: 0.5rem 0 1.5rem 0
-        font-size: 1rem
+
+        text-align: right
         color: white
+        font-family: "Roboto", sans-serif
+        font-size: 1rem
 
         &:focus
           border-color: white
 
+      textarea
+        height: 10rem
+        resize: none
+        text-align: left
 
+      .submit_button
+        padding: 0.8rem
+        border: none
+        border-radius: 4px
+        position: relative
+        bottom: 4px
+
+        text-transform: uppercase
+        color: white
+        background: darkcyan
+
+        text-shadow: none
+        box-shadow: 0 4px 0 #4a4a4a
+        transition: all .1s linear 0s
+
+        &:hover
+          bottom: 3px
+          box-shadow: 0 3px 0 #444
+
+        &:active
+          bottom: 0
+          box-shadow: 0 0 0 #444
   img
     box-shadow: 0 0 10px black
     height: inherit
