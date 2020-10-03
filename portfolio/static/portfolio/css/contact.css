@@ -116,14 +116,14 @@ form input, form textarea {
   display: flex;
   justify-content: center;
 }
-.split .contact_info .social_media i {
+.split .contact_info .social_media a {
   color: white;
   font-size: 4rem;
-  padding-right: 5rem;
+  margin-right: 5rem;
   text-shadow: 0 0 15px #444;
   transition: all 0.3s ease-in-out;
 }
-.split .contact_info .social_media i:hover {
+.split .contact_info .social_media a:hover {
   text-shadow: 0 0 5px #444;
 }
 .split .contact_info .social_media .fa-instagram:hover {
