@@ -60,7 +60,7 @@ form input, form textarea {
 }
 .split .contact_info .page_body .feedback_form {
   width: fit-content;
-  border-radius: 4px;
+  border-left: 1px solid yellow;
 }
 .split .contact_info .page_body .feedback_form:focus {
   border-color: white;
@@ -109,6 +109,37 @@ form input, form textarea {
 .split .contact_info .page_body .feedback_form .submit_button:active {
   bottom: 0;
   box-shadow: 0 0 0 #444;
+}
+.split .contact_info .social_media {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.split .contact_info .social_media i {
+  color: white;
+  font-size: 4rem;
+  padding-right: 5rem;
+  text-shadow: 0 0 15px #444;
+  transition: all 0.3s ease-in-out;
+}
+.split .contact_info .social_media i:hover {
+  text-shadow: 0 0 5px #444;
+}
+.split .contact_info .social_media .fa-instagram:hover {
+  color: #C13584;
+}
+.split .contact_info .social_media .fa-linkedin:hover {
+  color: #2d93ad;
+}
+.split .contact_info .social_media .fa-at:hover {
+  color: gray;
+}
+.split .contact_info .social_media .fa-phone-square-alt:hover {
+  color: gold;
+}
+.split .contact_info .social_media .fa-steam:hover {
+  color: #2a475e;
 }
 .split img {
   box-shadow: 0 0 10px black;

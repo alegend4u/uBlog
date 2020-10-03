@@ -62,8 +62,7 @@ form
 
       .feedback_form
         width: fit-content
-        border-radius: 4px
-
+        border-left: 1px solid yellow
 
         &:focus
           border-color: white
@@ -116,6 +115,39 @@ form
           &:active
             bottom: 0
             box-shadow: 0 0 0 #444
+
+    .social_media
+      margin-top: 5rem
+      width: 100%
+      display: flex
+      justify-content: center
+
+      i
+        color: white
+        font-size: 4rem
+        padding-right: 5rem
+        text-shadow: 0 0 15px #444
+        @include transition-ease
+
+        &:hover
+          text-shadow: 0 0 5px #444
+
+      .fa-instagram:hover
+        color: #C13584
+
+      .fa-linkedin:hover
+        color: #2d93ad
+
+      .fa-at:hover
+        color: gray
+
+      .fa-phone-square-alt:hover
+        color: gold
+
+      .fa-steam:hover
+        color: #2a475e
+
+
   img
     box-shadow: 0 0 10px black
     height: inherit
