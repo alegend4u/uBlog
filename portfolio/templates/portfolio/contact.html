@@ -13,13 +13,19 @@
         <div class="contact_info">
             <p class="header_text">Let's Connect...</p>
             <p class="subtitle_text">...always open for ideas, suggestions, opinions</p>
-            <form class="feedback_form" method="post">
-                <input type="text" name="name" placeholder="Name">
-                <input type="text" name="email" placeholder="Email" required>
-                <textarea name="feedback" rows="5" required
-                          placeholder="Any idea, feedback, suggestion, greeting or even your fav music."></textarea>
-                <input type="submit" class="submit_button">
-            </form>
+            <div class="page_body">
+                <div class="quote">
+                    <p class="quote_text">"You cannot not communicate."</p>
+                    <p class="author"> - Paul Watzlawick</p>
+                </div>
+                <form class="feedback_form" method="post">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="email" placeholder="Email" required>
+                    <textarea name="feedback" rows="5" required
+                              placeholder="Any idea, feedback, suggestion, greeting or even your fav music."></textarea>
+                    <input type="submit" class="submit_button">
+                </form>
+            </div>
             <div class="social_media"></div>
         </div>
         <img src="{% static 'portfolio/images/contact_image.jpeg' %}" alt="My another image here.">
