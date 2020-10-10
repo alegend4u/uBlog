@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Secular+One&display=swap");
 * {
   text-shadow: 1px 2px 0 black;
@@ -36,7 +35,7 @@ form input, form textarea {
   font-size: 3rem;
 }
 .split .contact_info .subtitle_text {
-  font-family: "Allura", cursive;
+  font-family: "Caveat", cursive;
   font-size: 3rem;
   text-align: right;
 }
@@ -138,8 +137,24 @@ form input, form textarea {
 .split .contact_info .social_media .fa-phone-square-alt:hover {
   color: gold;
 }
-.split .contact_info .social_media .fa-steam:hover {
-  color: #2a475e;
+.split .contact_info .social_media .fa-github:hover {
+  color: #111;
+}
+.split .contact_info .email_phone {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.split .contact_info .email_phone a {
+  font-size: 1rem;
+  padding: 0 1rem 0 1.2rem;
+  border-right: 2px solid #c2c2c2;
+  color: #c2c2c2;
+  transition: all 0.3s ease-in-out;
+}
+.split .contact_info .email_phone a:hover {
+  border-right-color: white;
+  color: white;
 }
 .split img {
   box-shadow: 0 0 10px black;

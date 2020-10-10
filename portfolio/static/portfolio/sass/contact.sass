@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand:wght@300&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap')
 @import variables
 @import mixins
@@ -13,7 +12,6 @@ form
 
 ::selection
   background: $primary-color
-  //color: black
 
 ::placeholder
   color: #bbb
@@ -37,7 +35,7 @@ form
       font-size: 3rem
 
     .subtitle_text
-      font-family: 'Allura', cursive
+      font-family: 'Caveat', cursive
       font-size: 3rem
       text-align: right
 
@@ -144,9 +142,24 @@ form
       .fa-phone-square-alt:hover
         color: gold
 
-      .fa-steam:hover
-        color: #2a475e
+      .fa-github:hover
+        color: #111
 
+    .email_phone
+      padding-top: 2rem
+      display: flex
+      justify-content: flex-end
+
+      a
+        font-size: 1rem
+        padding: 0 1rem 0 1.2rem
+        border-right: 2px solid $primary-color
+        color: $primary-color
+        @include transition-ease
+
+        &:hover
+          border-right-color: white
+          color: white
 
   img
     box-shadow: 0 0 10px black
