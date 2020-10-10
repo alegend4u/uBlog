@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300400500600700&display=swap");
 @keyframes animatetop {
   from {
@@ -22,6 +23,23 @@ html {
 
 .section {
   min-height: 100vh;
+}
+
+#section_motivation {
+  background: #1f1f1f;
+  color: white;
+}
+#section_motivation .container {
+  display: flex;
+  justify-content: space-between;
+}
+#section_motivation .container p {
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+  line-height: 3rem;
+}
+#section_motivation .container img {
+  height: 30rem;
 }
 
 .banner {
