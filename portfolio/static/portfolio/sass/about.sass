@@ -1,6 +1,20 @@
 @import 'variables'
+@import 'mixins'
 
-.landing_image
-  object-fit: cover
-  width: 100%
-  height: calc(100vh - #{$nav-height})
+.landing
+  @include fullpage
+  background: url(../images/landing.png)
+
+.moreabout
+  @include fullpage
+  background: url(../images/aboutback.svg)
+
+.hobbies
+  @include fullpage
+  background: url(../images/hobbiesback.svg)
+
+.recentblogs
+  @include fullpage
+  background: url(../images/blogsback.svg)
+
+

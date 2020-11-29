@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1979.5" height="1035" viewBox="0 0 1979.5 1035">
+  <defs>
+    <filter id="Path_3" x="0" y="0" width="1979.5" height="1035" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="aboutback" transform="translate(29.5 -947.842)">
+    <rect id="More_on_me" data-name="More on me" width="1920" height="974.842" transform="translate(0 975)" fill="#333"/>
+    <g transform="matrix(1, 0, 0, 1, -29.5, 947.84)" filter="url(#Path_3)">
+      <path id="Path_3-2" data-name="Path 3" d="M2651.5,611.905v970.937H4571S4362.226,534.718,2651.5,611.905" transform="translate(-2621.5 -580.84)" fill="#3b3b3b"/>
+    </g>
+    <line id="Line_4" data-name="Line 4" x2="374" transform="translate(216.5 1104.5)" fill="none" stroke="#fff7e8" stroke-width="1"/>
+    <line id="Line_5" data-name="Line 5" x2="374" transform="translate(1330.5 1104.5)" fill="none" stroke="#fff7e8" stroke-width="1"/>
+  </g>
+</svg>

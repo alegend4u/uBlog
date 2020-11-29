@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="975" viewBox="0 0 1920 975">
+  <defs>
+    <filter id="Path_7" x="0" y="0" width="1920" height="973.184" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="hobbiesback" transform="translate(4.354 -975)">
+    <rect id="Hobbies" width="1915.644" height="975" transform="translate(0 975)" fill="#fff7e8"/>
+    <g transform="matrix(1, 0, 0, 1, -4.35, 975)" filter="url(#Path_7)">
+      <path id="Path_7-2" data-name="Path 7" d="M1915.644,1950C1917.583,2566.925-4.333,2217.8-4.333,2920.983c-7.411,4.952,1919.977,0,1919.977,0Z" transform="translate(4.35 -1950)" fill="#fff3dd"/>
+    </g>
+    <line id="Line_2" data-name="Line 2" x2="437" transform="translate(201.646 1107.5)" fill="none" stroke="#333" stroke-width="1"/>
+    <line id="Line_7" data-name="Line 7" x2="437" transform="translate(1273.29 1107.5)" fill="none" stroke="#333" stroke-width="1"/>
+  </g>
+</svg>

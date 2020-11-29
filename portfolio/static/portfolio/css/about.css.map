@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/about.sass"],"names":[],"mappings":"AAEA;EACE;EACA;EACA","file":"about.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/about.sass","../sass/_mixins.sass"],"names":[],"mappings":"AAGA;ECAE;EACA;EACA;EDAA;;;AAEF;ECJE;EACA;EACA;EDIA;;;AAEF;ECRE;EACA;EACA;EDQA;;;AAEF;ECZE;EACA;EACA;EDYA","file":"about.css"}

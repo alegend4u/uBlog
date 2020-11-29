@@ -1,7 +1,29 @@
-.landing_image {
-  object-fit: cover;
+.landing {
   width: 100%;
   height: calc(100vh - 5rem);
+  background-size: cover;
+  background: url(../images/landing.png);
+}
+
+.moreabout {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-size: cover;
+  background: url(../images/aboutback.svg);
+}
+
+.hobbies {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-size: cover;
+  background: url(../images/hobbiesback.svg);
+}
+
+.recentblogs {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-size: cover;
+  background: url(../images/blogsback.svg);
 }
 
 /*# sourceMappingURL=about.css.map */
