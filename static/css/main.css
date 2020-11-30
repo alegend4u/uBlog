@@ -39,26 +39,28 @@ input[type=text], textarea {
   transition: all 0.3s ease-in-out;
 }
 .nav .title {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  top: 50%;
   left: 2rem;
   font-family: "Playball", cursive;
   font-size: 2rem;
   font-weight: normal;
-  padding: 1rem;
   color: #c2c2c2;
+  transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
 }
 .nav .title:hover {
   text-shadow: 0 0 1px white;
 }
 .nav .navbar {
+  position: relative;
+  top: 50%;
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 2rem;
   text-align: right;
   font-family: "Roboto", serif;
+  transform: translateY(-50%);
 }
 .nav .navbar__item {
   font-size: 1.1rem;
