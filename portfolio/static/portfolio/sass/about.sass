@@ -1,20 +1,24 @@
 @import 'variables'
 @import 'mixins'
 
-.landing
+.section
   @include fullpage
-  background: url(../images/landing.png)
+
+  img
+    //position: absolute
+    width: inherit
+    height: inherit
+
+.landing
+  img
+    object-fit: cover
 
 .moreabout
-  @include fullpage
-  background: url(../images/aboutback.svg)
+  background: #333333
 
 .hobbies
-  @include fullpage
-  background: url(../images/hobbiesback.svg)
+  background: #FFF7E8
 
 .recentblogs
-  @include fullpage
-  background: url(../images/blogsback.svg)
-
+  background: #00565F
 
