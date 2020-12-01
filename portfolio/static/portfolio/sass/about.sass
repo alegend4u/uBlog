@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600&display=swap')
 @import 'variables'
 @import 'mixins'
 
@@ -5,20 +6,78 @@
   width: 100%
   height: 100vh
 
-  img
+  .back
+    position: absolute
     width: inherit
     height: inherit
+
+  .title_sec
+    position: relative
+    top: 7%
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+
+    color: white
+    text-transform: uppercase
+    font-size: 2rem
+    font-family: 'Dosis', sans-serif
+    @include abs_vert_center
+
+    .title_line
+      height: 1px
+      filter: drop-shadow(0 0 2px black)
+
+    .title
+      font-weight: 500
+      text-shadow: 0 0 5px black
 
 .landing
   img
     object-fit: cover
 
 .moreabout
-  background: #333333
+  background: $moreabout_dark
+
+  .back
+    fill: $moreabout_light
+
+  .title_sec
+
+    .title
+      color: $hobbies_dark
+
+    .title_line
+      stroke: $hobbies_dark
+
 
 .hobbies
-  background: #FFF7E8
+  background: $hobbies_light
+  color: $moreabout_dark
+
+  .back
+    fill: $hobbies_dark
+
+  .title_sec
+
+    .title
+      color: $moreabout_dark
+      text-shadow: 0 0 5px #555
+
+    .title_line
+      stroke: $moreabout_dark
+      filter: drop-shadow(0 0 2px black)
 
 .recentblogs
-  background: #00565F
+  background: $blogs_dark
 
+  .back
+    fill: $blogs_light
+
+  .title_sec
+
+    .title_line
+      stroke: $hobbies_dark
+
+    .title
+      color: $hobbies_light

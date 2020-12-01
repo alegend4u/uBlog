@@ -1,10 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;500;600&display=swap");
 .section {
   width: 100%;
   height: 100vh;
 }
-.section img {
+.section .back {
+  position: absolute;
   width: inherit;
   height: inherit;
+}
+.section .title_sec {
+  position: relative;
+  top: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: white;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Dosis", sans-serif;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section .title_sec .title_line {
+  height: 1px;
+  filter: drop-shadow(0 0 2px black);
+}
+.section .title_sec .title {
+  font-weight: 500;
+  text-shadow: 0 0 5px black;
 }
 
 .landing img {
@@ -14,13 +37,43 @@
 .moreabout {
   background: #333333;
 }
+.moreabout .back {
+  fill: #3B3B3B;
+}
+.moreabout .title_sec .title {
+  color: #FFF3DD;
+}
+.moreabout .title_sec .title_line {
+  stroke: #FFF3DD;
+}
 
 .hobbies {
   background: #FFF7E8;
+  color: #333333;
+}
+.hobbies .back {
+  fill: #FFF3DD;
+}
+.hobbies .title_sec .title {
+  color: #333333;
+  text-shadow: 0 0 5px #555;
+}
+.hobbies .title_sec .title_line {
+  stroke: #333333;
+  filter: drop-shadow(0 0 2px black);
 }
 
 .recentblogs {
   background: #00565F;
+}
+.recentblogs .back {
+  fill: #026B76;
+}
+.recentblogs .title_sec .title_line {
+  stroke: #FFF3DD;
+}
+.recentblogs .title_sec .title {
+  color: #FFF7E8;
 }
 
 /*# sourceMappingURL=about.css.map */
