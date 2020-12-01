@@ -11,7 +11,11 @@
   width: 100vw
   height: $nav-height
   background: $primary-background
+  opacity: 75%
   @include transition-ease
+
+  &:hover
+    opacity: 100%
 
   .title
     position: absolute
@@ -22,9 +26,11 @@
     font-weight: normal
     color: $primary-color
     transform: translateY(-50%)
+    z-index: 2
     @include transition-ease
 
     &:hover
+      color: white
       text-shadow: 0 0 1px white
 
   .navbar

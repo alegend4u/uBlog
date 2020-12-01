@@ -36,7 +36,11 @@ input[type=text], textarea {
   width: 100vw;
   height: 4.5rem;
   background: #040303;
+  opacity: 75%;
   transition: all 0.3s ease-in-out;
+}
+.nav:hover {
+  opacity: 100%;
 }
 .nav .title {
   position: absolute;
@@ -47,9 +51,11 @@ input[type=text], textarea {
   font-weight: normal;
   color: #c2c2c2;
   transform: translateY(-50%);
+  z-index: 2;
   transition: all 0.3s ease-in-out;
 }
 .nav .title:hover {
+  color: white;
   text-shadow: 0 0 1px white;
 }
 .nav .navbar {
