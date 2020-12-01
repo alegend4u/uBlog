@@ -1,6 +1,6 @@
 .section {
   width: 100%;
-  height: calc(100vh - 4.5rem);
+  height: 100vh;
 }
 .section img {
   width: inherit;
