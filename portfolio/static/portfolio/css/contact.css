@@ -30,7 +30,7 @@ form input, form textarea {
   font-size: 1.5rem;
 }
 .split .contact_info .header_text {
-  padding-top: 3rem;
+  padding-top: 2rem;
   font-family: "Secular One", sans-serif;
   font-size: 3rem;
 }
@@ -46,6 +46,7 @@ form input, form textarea {
 }
 .split .contact_info .page_body .quote {
   margin: auto;
+  padding-right: 1rem;
 }
 .split .contact_info .page_body .quote_text {
   font-size: 3rem;
@@ -54,7 +55,7 @@ form input, form textarea {
 .split .contact_info .page_body .quote .author {
   padding-top: 2rem;
   text-align: right;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Caveat", cursive;
 }
 .split .contact_info .page_body .feedback_form {
@@ -110,14 +111,14 @@ form input, form textarea {
   box-shadow: 0 0 0 #444;
 }
 .split .contact_info .social_media {
-  margin-top: 5rem;
-  width: 100%;
+  margin-top: 2rem;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
 .split .contact_info .social_media a {
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-right: 5rem;
   text-shadow: 0 0 15px #444;
   transition: all 0.3s ease-in-out;
@@ -141,7 +142,6 @@ form input, form textarea {
   color: #111;
 }
 .split .contact_info .email_phone {
-  padding-top: 2rem;
   display: flex;
   justify-content: flex-end;
 }
