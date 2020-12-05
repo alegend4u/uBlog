@@ -11,30 +11,13 @@
 {% endblock %}
 
 {% block content %}
-    <div>
-        {% for moment in moments %}
-            <div class="moment">
-                <div class="moment__head">
-                    <span class="moment__head__title">{{ moment.title }}: {{ moment.description }}</span>
-                    <span class="moment__head__time">{{ moment.get_friendly_timestamp }}</span>
-                </div>
-                <div class="moment__body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente officiis perferendis sit
-                        perspiciatis.
-                        Veritatis sit necessitatibus alias, reiciendis nesciunt eveniet inventore nisi. Modi quaerat
-                        molestiae
-                        dolorem facere, explicabo quia sint.</p>
-                    <div class="moment__body__gallery">
-                        {% for media in moment.get_gallery %}
-                            <div class="slide">
-                                <img src="{{ media.file.url }}" alt="{{ media.file.name }}"/>
-                            </div>
-                        {% endfor %}
-                        <a class="prev">&#10094;</a>
-                        <a class="next">&#10095;</a>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+    <p class="heading">My Blogs</p>
+    <div class="blog_grid">
+        <div class="blog">
+            <p class="timestamp">a month ago</p>
+            <p class="title">This is how I wrote my first blog.</p>
+            <p class="subtext">This is just a sub text. This is just a sub text. This is just a sub text. This is just a sub text.</p>
+
+        </div>
     </div>
 {% endblock %}
