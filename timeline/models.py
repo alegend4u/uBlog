@@ -1,59 +1,33 @@
-import datetime
-from pathlib import Path
+from django.db import models as models
+from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.core.fields import RichTextField
+from wagtail.core.models import Page
+from wagtail.search import index
 
-import mimetypes
-from django.db import models
-
-from timeline import utils
-
-TEXT_SHORT = 25
-SMALL_TEXT = 256
-LARGE_TEXT = 1500
+MED_LENGTH = 255
+MAX_LENGTH = 1023
 
 
-# Create your models here.
-class Moment(models.Model):
-    title = models.CharField(max_length=SMALL_TEXT)
-    description = models.CharField(max_length=LARGE_TEXT, blank=True, )
-    timestamp = models.DateTimeField(default=datetime.datetime.now)
+class IndexPage(Page):
+    description = RichTextField()
 
-    def __str__(self):
-        return self.title
-
-    def get_gallery(self):
-        return self.gallery.get_queryset()
-
-    def get_friendly_timestamp(self):
-        return utils.pretty_date(self.timestamp)
+    content_panels = Page.content_panels + [
+        FieldPanel('description', classname='index_description'),
+    ]
 
 
-def moment_gallery_path(instance, filename):
-    return Path('timeline') / str(instance.moment) / filename
+class Post(Page):
+    intro = models.CharField(max_length=MAX_LENGTH)
+    timestamp = models.DateField("Post Date")
+    body = RichTextField()
 
+    search_fields = [
+        index.SearchField('intro'),
+        index.SearchField('body'),
+    ]
 
-class Media(models.Model):
-    moment = models.ForeignKey(Moment, related_name='gallery', on_delete=models.CASCADE)
-    file = models.FileField(upload_to=moment_gallery_path)
-    TYPE_CHOICES = (
-        ('i', 'Image'),
-        ('v', 'Video'),
-    )
-    type = models.CharField(max_length=TEXT_SHORT, choices=TYPE_CHOICES)
-
-    class Meta:
-        verbose_name_plural = 'Media'
-
-    def __str__(self):
-        return f'{self.moment}:{self.file.name}'
-
-    def save(self, *args, **kwargs):
-        file_mime, _ = mimetypes.guess_type(str(self.file))
-        file_mime = file_mime.lower()
-        if 'video' in file_mime:
-            self.type = 'v'
-        elif 'image' in file_mime:
-            self.type = 'i'
-        else:
-            # Should raise error
-            raise TypeError("Media file not supported or invalid.")
-        super(Media, self).save(*args, **kwargs)
+    content_panels = Page.content_panels + [
+        FieldPanel('intro', classname='post_intro'),
+        FieldPanel('timestamp', classname='post_timestamp'),
+        FieldPanel('body', classname='post_body'),
+    ]
