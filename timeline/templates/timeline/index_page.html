@@ -16,7 +16,7 @@
 
 {% block content %}
     <p class="heading">{{ page.title }}</p>
-    <p class="index_descrip">{{ page.description }}</p>
+    <div class="index_descrip">{{ page.description | richtext }}</div>
     <div class="blog_grid">
     {% for post in page.get_children %}
         <div class="blog">

@@ -6,21 +6,29 @@ body {
 }
 
 .heading {
-  width: 70%;
   margin: 0 auto;
+  width: 70%;
   font-family: "Berkshire Swash", cursive;
   font-size: 3rem;
   text-align: right;
   padding-top: 2rem;
 }
 
+.index_descrip > * {
+  margin: 0 auto;
+  width: 70%;
+  padding: 1.5rem 0;
+  text-align: right;
+  font-style: italic;
+}
+
 .blog_grid {
+  margin: 0 auto;
+  width: 70%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-auto-rows: 20rem;
   grid-gap: 1rem;
-  margin: 0 auto;
-  width: 70%;
   padding: 1.5rem 0;
 }
 .blog_grid .blog {

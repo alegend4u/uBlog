@@ -3,25 +3,35 @@
 @import 'variables'
 @import 'mixins'
 
+
+@mixin centerit
+  margin: 0 auto
+  width: 70%
+
+
 body
   background: linear-gradient(45deg, #8BB4C4, white) fixed
   height: 100vh
 
 .heading
-  width: 70%
-  margin: 0 auto
+  @include centerit
   font-family: "Berkshire Swash", cursive
   font-size: 3rem
   text-align: right
   padding-top: 2rem
 
+.index_descrip > *
+  @include centerit
+  padding: 1.5rem 0
+  text-align: right
+  font-style: italic
+
 .blog_grid
+  @include centerit
   display: grid
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
   grid-auto-rows: 20rem
   grid-gap: 1rem
-  margin: 0 auto
-  width: 70%
   padding: 1.5rem 0
 
   .blog
