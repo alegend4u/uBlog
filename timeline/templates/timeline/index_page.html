@@ -19,11 +19,11 @@
     <div class="index_descrip">{{ page.description | richtext }}</div>
     <div class="blog_grid">
     {% for post in page.get_children %}
-        <div class="blog">
+        <a class="blog" href="{{ post.url }}">
             <p class="timestamp">{{ post.timestamp }}</p>
             <p class="title">{{ post.title }}</p>
             <p class="subtext">{{ post.intro }}</p>
-        </div>
+        </a>
     {% endfor %}
     </div>
 {% endblock %}
