@@ -18,7 +18,7 @@ class IndexPage(Page):
 
 class Post(Page):
     intro = models.CharField(max_length=MAX_LENGTH)
-    timestamp = models.DateField("Post Date")
+    date = models.DateField("Post Date")
     body = RichTextField()
 
     search_fields = [
@@ -28,6 +28,6 @@ class Post(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname='post_intro'),
-        FieldPanel('timestamp', classname='post_timestamp'),
+        FieldPanel('date', classname='post_date'),
         FieldPanel('body', classname='post_body'),
     ]
