@@ -10,7 +10,7 @@ body
   @include transition-ease
 
   height: 4rem
-  position: absolute
+  position: fixed
   top: 5%
   left: 5%
   transform: translateX(-50%)
@@ -19,6 +19,28 @@ body
 
   &:hover
     fill: #597569
+
+.nav_post
+  height: 3rem
+  position: fixed
+  top: 50%
+  transform: translate(-50%, -50%)
+  fill: white
+
+  .border
+    fill: #707070
+    @include transition-ease
+
+  &:hover
+    .border
+      fill: #2C80EB
+
+.prev
+  left: 5%
+
+.next
+  transform: rotate(180deg)
+  left: 95%
 
 .page
   @include centerit
