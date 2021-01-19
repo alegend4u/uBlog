@@ -6,6 +6,20 @@ body
   background: linear-gradient(#FFF, #7FB89F)
   height: 100vh
 
+.back
+  @include transition-ease
+
+  height: 4rem
+  position: absolute
+  top: 5%
+  left: 5%
+  transform: translateX(-50%)
+  fill: #7FB89F
+  filter: drop-shadow(0 0 1px gray)
+
+  &:hover
+    fill: #597569
+
 .page
   @include centerit
   height: inherit
