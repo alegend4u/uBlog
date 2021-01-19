@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap')
 @import 'mixins'
 
 body
@@ -8,18 +9,21 @@ body
 .page
   @include centerit
   height: inherit
-  border-left: 1px solid #707070
-  border-right: 1px solid #707070
-  box-shadow: 0 0 20px #888
+  box-shadow: 0 0 30px #888
   background: white
+  padding: 3rem
+
+  & > *
+    padding-top: 2rem
 
   .datebox
-    position: absolute
+    position: fixed
     top: 0
     left: 50%
     transform: translateX(-50%)
     width: 15%
     filter: drop-shadow(0 1px 1px #888)
+    padding-top: 0
 
     .date
       font-size: 2.5rem
@@ -30,4 +34,9 @@ body
     text-align: center
     font-size: 2.5rem
     font-family: "Rockwell", sans-serif
-    padding: 5rem 0 2rem
+    padding-top: 2rem
+
+  .intro
+    font-family: "Source Serif Pro", serif
+    font-weight: 300
+    font-size: 1.3rem

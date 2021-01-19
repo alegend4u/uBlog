@@ -28,10 +28,8 @@
 
         <p class="post_title">{{ page.title }}</p>
 
-        <div class="intro">{{ page.intro }}</div>
+        <p class="intro">{{ page.intro }}</p>
 
-        {{ page.body|richtext }}
-
-        <a href="{{ page.get_parent.url }}">Return to blog</a>
+        <div>{{ page.body|richtext }}</div>
     </div>
 {% endblock %}
