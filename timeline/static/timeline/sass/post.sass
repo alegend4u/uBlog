@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap')
 @import 'mixins'
 
 body
-  background: linear-gradient(#FFF, #7FB89F)
+  background: linear-gradient(#FFF, #7FB89F) fixed
   height: 100vh
 
 .back
@@ -44,10 +46,10 @@ body
 
 .page
   @include centerit
-  height: inherit
+  min-height: 100vh
   box-shadow: 0 0 30px #888
   background: white
-  padding: 3rem
+  padding: 3rem 10rem 8rem 10rem
 
   & > *
     padding-top: 2rem
@@ -73,6 +75,21 @@ body
     padding-top: 2rem
 
   .intro
-    font-family: "Source Serif Pro", serif
+    font-family: "Crimson Text", serif
     font-weight: 300
-    font-size: 1.3rem
+    font-size: 1.5rem
+    font-style: italic
+
+  .post_body
+    line-height: 2rem
+    font-size: 1.2rem
+    font-family: "Source Serif Pro", serif
+
+    a
+      color: #597569
+
+    p
+     margin-block: 1rem
+
+    ul, ol
+      margin: 2rem
