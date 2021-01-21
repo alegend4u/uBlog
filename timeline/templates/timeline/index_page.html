@@ -15,15 +15,20 @@
 {% endblock %}
 
 {% block content %}
-    <p class="heading">{{ page.title }}</p>
-    <div class="index_descrip">{{ page.description | richtext }}</div>
-    <div class="blog_grid">
-    {% for post in page.get_children %}
-        <a class="blog" href="{% pageurl post %}">
-            <p class="date">{{ post.date }}</p>
-            <p class="title">{{ post.title }}</p>
-            <p class="subtext">{{ post.intro }}</p>
-        </a>
-    {% endfor %}
+    <div class="container">
+        <p class="heading">{{ page.title }}</p>
+        <div class="index_descrip">{{ page.description | richtext }}</div>
+        <div class="blog_grid">
+            {% for post in page.get_children %}
+                <a class="blog" href="{% pageurl post %}">
+                    <div class="content">
+                        <p class="date">{{ post.specific.date }}</p>
+                        <p class="title">{{ post.title }}</p>
+                        <p class="subtext">{{ post.specific.intro }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
     </div>
+    <script src="{% static 'timeline/js/index_page.js' %}"></script>
 {% endblock %}
