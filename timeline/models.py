@@ -15,6 +15,13 @@ class IndexPage(Page):
         FieldPanel('description', classname='index_description'),
     ]
 
+    def get_context(self, request, *args, **kwargs):
+        # Update context to include only published posts, ordered by reverse-chron
+        context = super().get_context(request)
+        blog_posts = Post.objects.live().specific().order_by('-date')
+        context['blog_posts'] = blog_posts
+        return context
+
 
 class Post(Page):
     intro = models.CharField(max_length=MAX_LENGTH)
