@@ -51,30 +51,39 @@ body {
   min-height: 100vh;
   box-shadow: 0 0 30px #888;
   background: white;
-  padding: 3rem 10rem 8rem 10rem;
+  padding: 15rem 0 8rem;
 }
 .page > * {
   padding-top: 2rem;
+  width: 75%;
+  margin: 0 auto;
 }
-.page .datebox {
+.page .page_header {
   position: fixed;
   top: 0;
+  z-index: 1;
+  padding: 0;
+  width: inherit;
+  border-bottom: 1px solid gray;
+  background-color: inherit;
+  box-shadow: 0 1px 2px gray;
+}
+.page .page_header .datebox {
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
-  width: 15%;
+  width: 20%;
   filter: drop-shadow(0 1px 1px #888);
-  padding-top: 0;
 }
-.page .datebox .date {
+.page .page_header .datebox .date {
   font-size: 2.5rem;
   font-family: "Quicksand", sans-serif;
 }
-.page .post_title {
-  width: 100%;
+.page .page_header .post_title {
+  padding: 2rem;
   text-align: center;
   font-size: 2.5rem;
   font-family: "Rockwell", sans-serif;
-  padding-top: 2rem;
 }
 .page .intro {
   font-family: "Crimson Text", serif;
