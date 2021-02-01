@@ -44,6 +44,9 @@ body
   transform: rotate(180deg)
   left: 95%
 
+.scrolled
+  box-shadow: 0 1px 6px gray
+
 .page
   @include centerit
   min-height: 100vh
@@ -62,9 +65,8 @@ body
     z-index: 1
     padding: 0
     width: inherit
-    border-bottom: 1px solid gray
     background-color: inherit
-    box-shadow: 0 1px 4px gray
+    @include transition-ease
 
     .datebox
       position: relative

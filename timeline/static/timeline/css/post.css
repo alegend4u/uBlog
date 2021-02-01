@@ -45,6 +45,10 @@ body {
   left: 95%;
 }
 
+.scrolled {
+  box-shadow: 0 1px 6px gray;
+}
+
 .page {
   margin: 0 auto;
   width: 60%;
@@ -64,9 +68,8 @@ body {
   z-index: 1;
   padding: 0;
   width: inherit;
-  border-bottom: 1px solid gray;
   background-color: inherit;
-  box-shadow: 0 1px 4px gray;
+  transition: all 0.3s ease-in-out;
 }
 .page .page_header .datebox {
   position: relative;
