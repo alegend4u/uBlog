@@ -16,6 +16,13 @@ html {
   scroll-behavior: smooth;
 }
 
+ul {
+  margin-left: 1.5rem;
+}
+ul ul {
+  margin-left: 1.5rem;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
