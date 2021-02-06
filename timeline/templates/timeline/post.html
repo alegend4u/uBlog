@@ -43,8 +43,9 @@
             </g>
         </svg>
     </a>
-    <a href="{{ page.get_prev_sibling.url }}">
-        <svg class="nav_post prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 70">
+    <a class="nav_post prev" href="{{ page.get_prev_sibling.url }}">
+        <span class="tooltip_text">{{ page.get_prev_sibling.title }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 70">
             <g id="prev" transform="translate(0 70) rotate(-90)">
                 <path d="M 65.71787261962891 59.5 L 4.282129764556885 59.5 L 35 5.085487365722656 L 65.71787261962891 59.5 Z"
                       stroke="none"/>
@@ -54,8 +55,9 @@
             </g>
         </svg>
     </a>
-    <a href="{{ page.get_next_sibling.url }}">
-        <svg class="nav_post next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 70">
+    <a class="nav_post next" href="{{ page.get_next_sibling.url }}">
+        <span class="tooltip_text">{{ page.get_next_sibling.title }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 70">
             <g id="prev" transform="translate(0 70) rotate(-90)">
                 <path d="M 65.71787261962891 59.5 L 4.282129764556885 59.5 L 35 5.085487365722656 L 65.71787261962891 59.5 Z"
                       stroke="none"/>
