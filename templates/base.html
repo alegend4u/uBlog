@@ -1,34 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     {% block title %}
-        <title>Title</title>
-    {% endblock %}
-    {% load static %}
-    <link rel="stylesheet" href='{% static "css/main.css" %}' type="text/css">
-    {% block extracss %}
-
-    {% endblock %}
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-</head>
-<body>
-<nav class="nav">
-    <div class="menu-btn">
+    <title>Title</title>
+    {% endblock %} {% load static %}
+    <link rel="stylesheet" href='{% static "css/main.css" %}' type="text/css" />
+    {% block extracss %} {% endblock %}
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="menu-btn">
         <span class="burger upper"></span>
         <span class="burger middle"></span>
         <span class="burger lower"></span>
-    </div>
-    <a class="title" href="/">Rishabh Prajapati</a>
-    <ul class="navbar">
+      </div>
+      <a class="title" href="/">Rishabh Prajapati</a>
+      <ul class="navbar">
         <li><a class="navbar__item" href="/">About Me</a></li>
         <li><a class="navbar__item" href="/portfolio">Portfolio</a></li>
         <li><a class="navbar__item" href="/timeline">Timeline Blog</a></li>
         <li><a class="navbar__item" href="/contact">Contact Me</a></li>
-    </ul>
-</nav>
-{% block content %}
-{% endblock %}
-<script src='{% static "js/main.js" %}'></script>
-</body>
+      </ul>
+    </nav>
+    {% block content %} {% endblock %}
+    <script src='{% static "js/main.js" %}'></script>
+  </body>
 </html>
