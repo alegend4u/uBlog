@@ -1,11 +1,17 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
-library.add(faGithub);
-library.add(faFontAwesome);
+library.add(faGithub, faInstagram, faLinkedin);
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .mount("#app");

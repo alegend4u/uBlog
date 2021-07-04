@@ -107,7 +107,6 @@
   </div>
 </template>
 
-<style lang="scss">
-@import "@/sass/main.sass";
+<style lang="scss" scoped>
 @import "@/sass/portfolio/about.sass";
 </style>

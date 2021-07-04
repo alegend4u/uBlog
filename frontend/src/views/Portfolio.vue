@@ -44,11 +44,7 @@
       <p class="container__item_description"></p>
       <div class="container__item">
         <div class="flex">
-          <p class="title">
-            Programmer Analyst - AI Department
-            <font-awesome-icon :icon="['fab', 'github']" />
-            <font-awesome-icon :icon="['fab', 'font-awesome']" />
-          </p>
+          <p class="title">Programmer Analyst - AI Department</p>
           <p class="duration">December 2019 - September 2020</p>
         </div>
         <p class="container__item__subtitle">
@@ -192,7 +188,6 @@
 export default {};
 </script>
 
-<style lang="scss">
-@import "@/sass/main.sass";
+<style lang="scss" scoped>
 @import "@/sass/portfolio/portfolio.sass";
 </style>
