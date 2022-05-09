@@ -1,5 +1,6 @@
 from django.db import models as models
 from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.api import APIField
 from wagtail.core.fields import RichTextField
 from wagtail.core.models import Page
 from wagtail.search import index
@@ -15,6 +16,10 @@ class IndexPage(Page):
         FieldPanel('description', classname='index_description'),
     ]
 
+    api_fields = [
+        APIField("description"),
+    ]
+
     def get_context(self, request, *args, **kwargs):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
@@ -28,7 +33,7 @@ class Post(Page):
     date = models.DateField("Post Date")
     body = RichTextField()
 
-    search_fields = [
+    search_fields = Page.search_fields + [
         index.SearchField('intro'),
         index.SearchField('body'),
     ]
@@ -37,4 +42,10 @@ class Post(Page):
         FieldPanel('intro', classname='post_intro'),
         FieldPanel('date', classname='post_date'),
         FieldPanel('body', classname='post_body'),
+    ]
+
+    api_fields = [
+        APIField('intro'),
+        APIField('body'),
+        APIField('date'),
     ]

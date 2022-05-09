@@ -55,9 +55,14 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+
+    'wagtail.api.v2',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -69,6 +74,8 @@ MIDDLEWARE = [
     # Wagtail Middleware
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
+
+CORS_ALLOWED_ORIGINS = ["http://localhost:8080"]
 
 WAGTAIL_SITE_NAME = 'uBlog CMS'
 
