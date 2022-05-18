@@ -1,3 +1,5 @@
+from typing import Tuple
+
 from django.db import models as models
 from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.api import APIField
@@ -30,7 +32,6 @@ class IndexPage(Page):
 
 class Post(Page):
     intro = models.CharField(max_length=MAX_LENGTH)
-    date = models.DateField("Post Date")
     body = RichTextField()
 
     search_fields = Page.search_fields + [
@@ -40,12 +41,28 @@ class Post(Page):
 
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname='post_intro'),
-        FieldPanel('date', classname='post_date'),
         FieldPanel('body', classname='post_body'),
     ]
 
     api_fields = [
         APIField('intro'),
         APIField('body'),
-        APIField('date'),
+        APIField('last_published_at'),
     ]
+
+    def get_siblings_by_published_date(self) -> Tuple:
+        try:
+            prev_sibling = Post.objects.filter(
+                **{f"{Post.last_published_at.field.name}__lt": self.last_published_at}
+            ).latest(Post.last_published_at.field.name)
+        except Post.DoesNotExist:
+            prev_sibling = None
+
+        try:
+            next_sibling = Post.objects.filter(
+                **{f"{Post.last_published_at.field.name}__gt": self.last_published_at}
+            ).earliest(Post.last_published_at.field.name)
+        except Post.DoesNotExist:
+            next_sibling = None
+
+        return prev_sibling, next_sibling
