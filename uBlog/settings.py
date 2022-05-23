@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'timeline',
     'portfolio',
+    'contact',
 
     # Wagtail apps
     'wagtail.contrib.forms',
