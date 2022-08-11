@@ -3,7 +3,7 @@ asgiref==3.4.0
 beautifulsoup4==4.9.3
 certifi==2021.5.30
 chardet==4.0.0
-Django==3.2.5
+Django==3.2.15
 django-filter==2.4.0
 django-modelcluster==5.1
 django-taggit==1.5.0
